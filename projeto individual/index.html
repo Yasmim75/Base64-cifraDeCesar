@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    
+    <title>Mensagem Oculta</title>
+</head>
+
+<body>
+
+
+    <main>
+
+
+
+
+        <div class="container">
+
+
+            <div class="tipoDcode" class="cod">
+                <div id="text"> </div>
+
+                <p>Escolha a opção: </p>
+
+
+                <select name="escolha" id="cod-escolhido">
+                    <option value="select" id="opc-selecione" disabled selected>Selecione</option>
+
+                    <option value="cifraCesar" id="opção-cifrac">Cifra de César</option>
+                    <option value="base.64" id="opção-base">Base64</option>
+                </select>
+
+            </div>
+            <!--Aparece quando a opção cifra for selecionada-->
+            <div id="divCifra">
+                <p>Digite um número de incremento: </p>
+                <label id="lab-chave" class="lab-msg"> Número: </label>
+                <input id="chave" type="number" class="chave" min=1 max=26 placeholder="1-25"></input>
+
+            </div>
+
+            <section class="texto-cifra">
+                <label id="label-principal" class="label-msg"></label>
+                <input id="mensagem1" class="msg" placeholder="Digite sua mensagem...">
+            </section>
+            <section class="bttn">
+
+                <div class="radio-button">
+                    <input type="radio" name="radioInput" class="radio-input" id="codificar" value="codificar">
+                    <label class="bebel" for="codificar">Codificar</label>
+                </div>
+
+                <div class="radio-button2">
+                    <input type="radio" name="radioInput" class="radio-input" id="decodificar" value="decodificar">
+                    <label class="bebel" for="decodificar">Decodificar</label>
+                </div>
+
+
+                <div class="btn">
+                    <button type="submit" class="confirmar" id="btn-codificar">Confirmar</button>
+                </div>
+            </section>
+
+            <section class="texto-cifra">
+                <label id="last-label" class="lab-msg"></label>
+                <input id="mensagem2" class="msg" placeholder="Mensagem gerada..." />
+            </section>
+
+        </div>
+        <!--container-->
+    </main>
+    <button type="submit"   class="botaoAbrir" onclick="abrir('dv-modal')">Informações sobre <Br> Cifra de César e Base 64 </button>
+    </div>
+    <div id="dv-modal" class="p">
+        <div class="p-content">
+
+            <div class="p-body">
+
+                <p> <strong>Base64 </strong> é um algoritmo de codificação que permite transformar qualquer caractere de qualquer idioma em um alfabeto composto por letras, dígitos e sinais latinos. É frequentemente usado para transmitir dados binários por meio de transmissões somente de texto, por exemplo, para enviar imagens e arquivos anexados por e-mail. O método Base 64 consiste em 64 caracteres, sendo [A-Za-z0-9, / e +.</p>
+                <p> <strong>Cifra de César</strong> é uma das técnicas de criptografia mais simples e conhecidas. É um tipo de cifra de substituição em que cada letra do texto é substituída por outra. O método recebeu o nome de Júlio César, que o usava para se comunicar com seus generais.</p>A transformação pode ser representada pelo alinhamento de dois alfabetos. O alfabeto cifrado é o alfabeto normal girado para a direita ou para a esquerda por um número de posições.
+                Para criptografar uma mensagem, basta olhar para cada letra da mensagem na linha Normal e escrever a letra correspondente na linha Criptografar. Para descriptografar, faça o contrário. <br>
+                </p>
+            </div>
+
+        </div>
+        <div>
+            <button class="botaoFechar" onclick="fechar('dv-modal')">&times;</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <h3>Criado por Yasmim Alves - <a href="https://www.resilia.com.br/" target="_blank">Resilia Educação</a></h3>
+    </footer>
+    <script src="main.js"> </script>
+</body>
+
+</html>
